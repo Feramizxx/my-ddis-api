@@ -16,7 +16,7 @@ export class DatabaseModule implements TypeOrmOptionsFactory {
       password: process.env.DB_PASS || '',
       database: process.env.DB_NAME || 'the_shop',
       entities: [User, Sale, Item],
-      synchronize: true, // Set to false in production!
+      synchronize: false, // Set to false in production!
       retryAttempts: 3,
       retryDelay: 3000,
     };
